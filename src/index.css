@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #FAF7F0;
+  --color-cream-2: #F3EEE3;
+  --color-sand: #E8DFCF;
+  --color-espresso: #2D2928;
+  --color-ink: #1C1918;
+  --color-muted: #6F6862;
+  --color-ochre: #C2693A;
+  --color-ochre-dark: #A9552A;
+  --color-ochre-soft: #F4E3D3;
+  --color-line: rgba(45, 41, 40, 0.1);
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Instrument Serif", Georgia, serif;
+}
+
+html { background: var(--color-cream); }
+body { background: var(--color-cream); color: var(--color-ink); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+.tnum { font-variant-numeric: tabular-nums; }
+
+@layer components {
+.input {
+  @apply w-full rounded-xl border border-line bg-white px-3 py-2 text-sm text-ink outline-none transition placeholder:text-muted/60 focus:border-ochre focus:ring-2 focus:ring-ochre/20 disabled:bg-cream-2 disabled:text-muted;
+}
+.input-error { @apply border-red-400 focus:border-red-500 focus:ring-red-200; }
+.label { @apply mb-1 block text-xs font-medium text-muted; }
+}
+
+@media print {
+  .no-print { display: none !important; }
+}

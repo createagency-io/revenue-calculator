@@ -13,7 +13,7 @@
  * NEVER put the "service_role" / "secret" key in this file.
  */
 window.CREATE_CONFIG = {
-  supabaseUrl: "",
-  supabaseAnonKey: "",
+  supabaseUrl: "https://rfbbumcdrifyenyiwxrp.supabase.co",
+  supabaseAnonKey: "sb_publishable_v71nXNkKK4-MnplGH0Wksw_UML_w2Hr",
   idleMinutes: 30 // automatic sign-out after this many minutes without activity
 };
